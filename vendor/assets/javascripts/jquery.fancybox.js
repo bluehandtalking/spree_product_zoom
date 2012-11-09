@@ -19,6 +19,7 @@
 			F.open.apply( this, arguments );
 		},
 		didResize	= false,
+		isForward	= false,
 		resizeTimer	= null,
 		isTouch		= document.createTouch !== undefined,
 		isString	= function(str) {
