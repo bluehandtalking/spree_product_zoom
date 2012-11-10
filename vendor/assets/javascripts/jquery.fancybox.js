@@ -18,8 +18,8 @@
 		F = $.fancybox = function () {
 			F.open.apply( this, arguments );
 		},
+		isForward	= true,
 		didResize	= false,
-		isForward	= false,
 		resizeTimer	= null,
 		isTouch		= document.createTouch !== undefined,
 		isString	= function(str) {
