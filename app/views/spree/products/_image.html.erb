@@ -8,7 +8,9 @@
   <% else %>
     <%= link_to product_image(@product, :itemprop => "image"), @product.images.first.attachment.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox zoom-image large-image', :rel => 'gallery' %>
     <br />
-    <%= link_to image_tag('zoom.png', :class => 'click-to-zoom'), @product.images.first.attachment.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox zoom-image click-to-zoom', :rel => 'gallery' %>
+    <div id="zoom_icon">
+       <%= link_to image_tag('zoom.png', :class => 'click-to-zoom'), @product.images.first.attachment.url(Spree::ProductZoom::Config.default_image_style), :class => 'fancybox zoom-image click-to-zoom', :rel => 'gallery' %>
+    </div>
     <div id="gallery" style="display:none;">
       <% @product.images.each do |img| %>
         <% unless img == @product.images.first %>
